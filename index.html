@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/dropdown.css">
+<title>Auto Complete</title>
+</head>
+<body id="body">
+<div class="wrap-div">
+	<div style="width: 300px;">
+		<div class="drpdwn-search">
+			<input class="sel" id="search" type="text" placeholder="Search">
+		</div>
+		<div class="drpdwn-result" id="result">
+		</div>
+	</div>
+</div>
+
+<script src="./js/index.js" />
+</body>
+
+<script>
+	window.addEventListener('load', () => {
+		fetch('./data/data.json')
+		.then((response) => response.json())
+		.then(data => AutoComplete.init(data));
+	});
+</script>
+</html>
