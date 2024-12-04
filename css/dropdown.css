@@ -10,8 +10,7 @@ p{
 .wrap-div{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	width: calc(100% - 100px);
+	justify-content: center;
 	margin: auto;
 }
 .drpdwn-search input{
