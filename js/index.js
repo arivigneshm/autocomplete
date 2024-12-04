@@ -27,7 +27,14 @@ let AutoComplete = (function(){
       html += dropDownHtml( data[i], searchValue, i);
     }
     if(!data.length){
-      html = '<em class="highlight noresult">No results found</em>';
+      html = `<div class="highlight noresult flexM fdirection">
+                <div class="flexM no-res-img-wrap">
+                  <img class="wh100" src="../assets/noresult.png" />
+                </div>
+                <div>
+                  No results found
+                </div>
+              </div>`;
     }
     getElem('result').innerHTML = html ;
   }
@@ -193,7 +200,7 @@ let AutoComplete = (function(){
 
     return '<div data-index="'+index+'" class="user-wrap">'+
               '<div class="userimg">'+
-                '<img src="../assets/download.png" alt="image">'+
+                '<img src="../assets/user.png" alt="image">'+
               '</div>'+
               '<div class="user-desc">'+
                 getName(name || displayName, searchValue)+
